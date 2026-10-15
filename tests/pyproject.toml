@@ -1,0 +1,19 @@
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+
+[tool.coverage.run]
+source = ["app"]
+
+[tool.coverage.report]
+fail_under = 80
+show_missing = true
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+# E/W = style pycodestyle, F = imports/variables inutilisés, I = tri des imports,
+# B = bugs probables, UP = syntaxe moderne, SIM = code simplifiable
+select = ["E", "F", "W", "I", "B", "UP", "SIM"]
